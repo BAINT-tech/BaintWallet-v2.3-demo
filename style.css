@@ -1,0 +1,147 @@
+/* ===== BAINT Wallet V2.3 Demo Styles ===== */
+
+:root {
+  --bg: #0b0b0f;
+  --text: #fff;
+  --accent: #3b82f6;
+  --card-bg: #1b1b22;
+}
+
+.light {
+  --bg: #f8f8fa;
+  --text: #1a1a1a;
+  --accent: #2563eb;
+  --card-bg: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card-bg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  margin: 0 0.8rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent);
+}
+
+#theme-toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.page {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.page.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* BUTTONS */
+button {
+  background: var(--accent);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* INPUTS */
+input, select {
+  display: block;
+  width: 100%;
+  margin: 0.6rem 0;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* BALANCE CARD */
+.balance-card {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.hidden {
+  display: none;
+}
+
+/* TX LIST */
+#tx-list {
+  list-style: none;
+  padding: 0;
+}
+
+#tx-list li {
+  background: var(--card-bg);
+  padding: 0.6rem;
+  border-radius: 6px;
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+/* CODE BLOCK */
+code {
+  display: inline-block;
+  background: var(--card-bg);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-family: monospace;
+  color: var(--accent);
+}
